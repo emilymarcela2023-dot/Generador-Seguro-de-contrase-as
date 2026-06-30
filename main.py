@@ -5,12 +5,16 @@ import random
 import string
 from datetime import datetime
 
-def generar_contrasena(longitud):
-    caracteres = string.ascii_uppercase + string.ascii_lowercase + string.digits + "!@#$%&_-"
+def generar_contraseña(longitud):
+    lista_caracteres = [
+        string.ascii_uppercase,
+        string.ascii_lowercase,
+        string.digits,
+        "!@#$%&_-"
+    ]
+
+    caracteres = "".join(lista_caracteres) 
     password = ""
-    for i in range(longitud):
-        password += random.choice(caracteres)
-    return password
 
 #  MENÚ PRINCIPAL
 
