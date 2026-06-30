@@ -5,6 +5,13 @@ import random
 import string
 from datetime import datetime
 
+def generar_contrasena(longitud):
+    caracteres = string.ascii_uppercase + string.ascii_lowercase + string.digits + "!@#$%&_-"
+    password = ""
+    for i in range(longitud):
+        password += random.choice(caracteres)
+    return password
+
 #  MENÚ PRINCIPAL
 
 print("¡Bienvenido a FutureShield!")
